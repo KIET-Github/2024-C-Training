@@ -1,4 +1,5 @@
 #include<bits/stdc++.>
+using namespace std;
 #define max 10
 
 int queue[max];

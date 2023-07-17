@@ -1,0 +1,52 @@
+public class LecQueue {
+    static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    static class Queue{
+        Node front,rear;
+       public Queue(){
+           this.front=null;
+           this.rear=null;
+       }
+    public void enQueue(int data){
+           Node newNode =new Node(data);
+           if(rear==null){
+               rear=front=newNode;
+               return;
+           }
+           rear.next=newNode;
+           rear=newNode;
+       }
+    public void deQueue(){
+           if(front==null){
+               rear=null;
+               return;
+           }
+           front=front.next;
+       }
+       public void print(){
+           if(rear==null){
+               return;
+           }
+           while(front!=null){
+               System.out.println(front.data);
+               deQueue();
+           }
+       }
+
+    }
+    public static void main(String[] args) {
+       Queue q=new Queue();
+       q.enQueue(1);
+       q.enQueue(2);
+       q.enQueue(3);
+       q.enQueue(4);
+       q.deQueue();
+        q.print();
+    }
+}

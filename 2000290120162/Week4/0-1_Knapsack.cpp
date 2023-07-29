@@ -1,5 +1,4 @@
-#include <iostream>
-#include <climits>
+#include <bits/stdc++.h>
 using namespace std;
 int knapSack(int v[], int w[], int n, int W) {
    if (W < 0)

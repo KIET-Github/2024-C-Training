@@ -1,0 +1,48 @@
+Stack & Queue Implementation:
+
+Stack implementation:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+   
+    stack<int> myStack;
+
+   
+    myStack.push(1);
+    myStack.push(2);
+    myStack.push(3);
+
+   
+    while (!myStack.empty()) {
+        cout << "Stack top: " << myStack.top() <<endl;
+        myStack.pop();
+    }
+   cout <<endl;
+
+    // Queue implementation:
+    queue<int> myQueue;
+
+   
+    myQueue.push(4);
+    myQueue.push(5);
+    myQueue.push(6);
+
+    
+   cout << "Front of the queue: " << myQueue.front() << endl;
+    cout << "Back of the queue: " << myQueue.back() << endl;
+   cout << endl;
+
+   
+    while (!myQueue.empty()) {
+        cout << "Queue front: " << myQueue.front() << endl;
+        myQueue.pop();
+    }
+    cout << endl;
+
+  
+    cout << "Is stack empty? " << (myStack.empty() ? "Yes" : "No") << endl;
+   cout << "Is queue empty? " << (myQueue.empty() ? "Yes" : "No") << endl;
+
+    return 0;
+}
